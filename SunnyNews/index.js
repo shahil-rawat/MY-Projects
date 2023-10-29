@@ -212,7 +212,7 @@ function displayNews() {
         discription.innerHTML = news.description;
 
         var link = document.createElement('a');
-        link.className="btn btn-dark";
+        link.className="btn btn-primary";
         link.setAttribute("target", "_blank");
         link.href = news.url;
         link.innerHTML="Read more";
