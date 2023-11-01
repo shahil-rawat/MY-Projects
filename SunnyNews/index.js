@@ -4,6 +4,7 @@ const businessBtn = document.getElementById("business");
 const sportsBtn = document.getElementById("sport");
 const entertainmentBtn = document.getElementById("entertainment");
 const technologyBtn = document.getElementById("technology");
+const scienceBtn = document.getElementById("science");
 const searchBtn = document.getElementById("searchBtn");
 
 const newsQuery = document.getElementById("newsQuery");
@@ -13,7 +14,7 @@ const newsdetails = document.getElementById("newsdetails");
 // Array
 var newsDataArr = [];
 
-// apis 
+// apis  
 const API_KEY = "f89e9a30fb7f45c7ac6a2f6e8bf265a3";
 const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?country=in&apiKey=";
 const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=";
@@ -21,6 +22,8 @@ const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=
 const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=";
 const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=";
 const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=8&apiKey=";
+const SCIENCE_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=science&pageSize=8&apiKey=";
+
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
 window.onload = function() {
@@ -52,6 +55,11 @@ entertainmentBtn.addEventListener("click",function(){
 technologyBtn.addEventListener("click",function(){
     newsType.innerHTML="<h4>Technology</h4>";
     fetchTechnologyNews();
+});
+
+scienceBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>Science</h4>";
+    fetchScienceNews();
 });
 
 searchBtn.addEventListener("click",function(){
@@ -143,6 +151,22 @@ const fetchSportsNews = async () => {
 
 const fetchTechnologyNews = async () => {
     const response = await fetch(TECHNOLOGY_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
+
+const fetchScienceNews = async () => {
+    const response = await fetch(SCIENCE_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
