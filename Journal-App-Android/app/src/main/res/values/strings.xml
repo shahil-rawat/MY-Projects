@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">JournalApp</string>
+  <string name="add_entry">Add a new entry</string>
+  <string name="title_label">Title</string>
+  <string name="date">Date</string>
+  <string name="start_time">Start Time</string>
+  <string name="end_time">End Time</string>
+  <string name="save_label">Save</string>
+  <string name="to">To</string>
+<!--  <string name="info">LOL</string>-->
+  <string name="info">
+  "\nThe Journal App is your perfect companion for tracking your daily adventures. \n It's easy to navigate, remembers everything you tell it, and lets you share your stories with others. \nThe app is also super accessible and easy to use for everyone, even those with visual impairments. \nStart your journaling adventure today with the Journal App!\n"
+</string>
+  <string name="record_entry">Record Entry</string>
+</resources>

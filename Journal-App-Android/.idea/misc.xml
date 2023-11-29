@@ -1,0 +1,21 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/fragment_date_picker.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/layout/fragment_entry.xml" value="0.2609375" />
+        <entry key="app/src/main/res/layout/fragment_entry_details.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/fragment_entry_list.xml" value="0.2609375" />
+        <entry key="app/src/main/res/layout/fragment_time_picker.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.13489583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
